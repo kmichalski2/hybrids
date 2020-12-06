@@ -1,0 +1,10 @@
+<p>
+  <button class="btn btn-primary" type="button" (click)="onToggleClicked()">
+    Show My Games
+  </button>
+</p>
+<div class="collapse"  [class.show]="isExpanded">
+  <div class="card card-body">
+    <ng-content></ng-content>
+  </div>
+</div>

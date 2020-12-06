@@ -6,6 +6,8 @@ import {HttpClientModule} from "@angular/common/http";
 import {MyGamesListComponent} from "./ui/my-games-list/my-games-list.component";
 import {RouterModule, Routes} from "@angular/router";
 import {GET_GAMES_SERVICE} from "./infrastructure/get-games.service";
+import {CardComponent} from "./ui/card/card.component";
+import {TabsComponent} from "./ui/tabs/tabs.component";
 
 const routes: Routes = [{
   path: 'games', component: GamesListComponent,
@@ -15,7 +17,7 @@ const routes: Routes = [{
 ]
 
 @NgModule({
-  declarations: [GamesListComponent, MyGamesListComponent],
+  declarations: [GamesListComponent, MyGamesListComponent, CardComponent, TabsComponent],
   imports: [
     CommonModule,
     HttpClientModule,
