@@ -6,10 +6,17 @@
 
 <section class="py-5 bg-light">
   <div class="container">
-    <div class="row">
-      <div class="col-md-3 mb-4" *ngFor="let game of games$ | async">
-        <app-card [game]="game" (buyClicked)="onBuyClicked($event)"></app-card>
+    <app-tabs>
+      <div class="row">
+        <div class="col-md-3 mb-4" *ngFor="let game of games$ | async">
+          <app-card [game]="game">
+            <div class="btn-group">
+              <button type="button" class="btn btn-sm btn-success" (click)="onBuyClicked(game)">Buy</button>
+            </div>
+            <small class="text-muted">{{game.price | currency}}</small>
+          </app-card>
+        </div>
       </div>
-    </div>
+    </app-tabs>
   </div>
 </section>

@@ -8,18 +8,6 @@ import {Game} from "../../infrastructure/http-get-games.service";
 })
 export class CardComponent  {
   @Input() game: Game;
-  @Output() buyClicked: EventEmitter<GameBoughtEvent>;
 
-  constructor() {
-    this.buyClicked = new EventEmitter<GameBoughtEvent>();
-  }
-
-  onBuyClicked(game: Game): void {
-    this.buyClicked.emit(new GameBoughtEvent(game));
-  }
-}
-
-export class GameBoughtEvent {
-  constructor(public readonly payload: Game) {
-  }
+  constructor() {}
 }
