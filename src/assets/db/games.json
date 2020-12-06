@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "title": "Spider-Man",
+      "price": 129.99,
+      "year": 2018,
+      "image": "https://upload.wikimedia.org/wikipedia/en/e/e1/Spider-Man_PS4_cover.jpg"
+    },
+    {
+      "title": "Call of Duty: Black Ops Cold War",
+      "price": 99.99,
+      "year": 2020,
+      "image": "https://upload.wikimedia.org/wikipedia/en/4/40/Black_Ops_Cold_War.jpeg"
+    },
+    {
+      "title": "Assassin's Creed Valhalla",
+      "price": 249.99,
+      "year": 2020,
+      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f8/ACValhalla.jpg/220px-ACValhalla.jpg"
+    },
+    {
+      "title": "NBA 2K21",
+      "price": 259.99,
+      "year": 2020,
+      "image": "https://upload.wikimedia.org/wikipedia/en/a/a2/NBA_2K21_-_Damian_Lilliard_cover_art.jpg"
+    },
+    {
+      "title": "Grand Theft Auto V",
+      "price": 129.99,
+      "year": 2013,
+      "image": "https://www.rockstargames.com/V/img/global/order/mobile-cover.jpg"
+    },
+    {
+      "title": "God of War",
+      "price": 39.99,
+      "year": 2018,
+      "image": "https://upload.wikimedia.org/wikipedia/en/a/a7/God_of_War_4_cover.jpg"
+    },
+    {
+      "title": "Ghost of Tsushima",
+      "price": 179.99,
+      "year": 2020,
+      "image": "https://upload.wikimedia.org/wikipedia/en/b/b6/Ghost_of_Tsushima.jpg"
+    },
+    {
+      "title": "Crash Bandicoot 4: It's About Time",
+      "price": 119.99,
+      "year": 2020,
+      "image": "https://upload.wikimedia.org/wikipedia/en/3/39/Crash_Bandicoot_4_Box_Art.jpeg"
+    },
+    {
+      "title": "Might and Magic VII: For Blood and Honor",
+      "price": 19.99,
+      "year": 1999,
+      "image": "https://upload.wikimedia.org/wikipedia/en/0/0b/MightAndMagic7Box.jpg"
+    },
+    {
+      "title": "Watch Dogs: Legion",
+      "price": 129.99,
+      "year": 2020,
+      "image": "https://upload.wikimedia.org/wikipedia/en/d/dc/Watch_Dogs_Legion_cover_art.webp"
+    },
+    {
+      "title": "Worms Armageddon",
+      "price": 19.99,
+      "year": 1999,
+      "image": "https://upload.wikimedia.org/wikipedia/en/e/e5/Wa-win-cover.jpg"
+    },
+    {
+      "title": "Heroes of Might and Magic III",
+      "price": 12.99,
+      "year": 1999,
+      "image": "https://upload.wikimedia.org/wikipedia/en/9/9b/Homm3boxart.jpg"
+    }
+  ]
+}
+
+

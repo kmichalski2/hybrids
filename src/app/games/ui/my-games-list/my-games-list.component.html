@@ -1,0 +1,33 @@
+<section class="jumbotron text-center mb-0" >
+  <div class="container" *ngIf="selected$ | async as selected else noGameSelected">
+    <h2>{{selected.title}}</h2>
+    <p>{{selected.year}}</p>
+    <button type="button" class="btn btn-primary" (click)="onPlayed(selected)">Play</button>
+  </div>
+  <ng-template #noGameSelected>
+    <div class="container">
+      <h2>Select the game to play</h2>
+    </div>
+  </ng-template>
+</section>
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-4" *ngFor="let game of myGames$ | async">
+        <div class="card mb-4 shadow-sm h-100">
+          <img [src]="game.image" style="max-height: 250px; object-fit: cover">
+          <div class="card-body d-flex justify-content-between flex-column">
+            <p class="card-text">{{game.title}}</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-success" (click)="onSelectClicked(game)">Buy</button>
+              </div>
+              <small class="text-muted">{{game.price | currency}}</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
