@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Game} from "../../infrastructure/http-get-games.service";
 import {Observable} from "rxjs";
 import {GamesStore} from "../../application/games.store";
+import {GameBoughtEvent} from "../card/card.component";
 
 @Component({
   selector: 'app-games-list',
@@ -20,7 +21,7 @@ export class GamesListComponent implements OnInit {
     this.selected$ = this.store.selectedGame$;
   }
 
-  onBuyClicked(game: Game): void {
-   this.store.buy(game);
+  onBuyClicked(event: GameBoughtEvent): void {
+   this.store.buy(event.payload);
   }
 }
