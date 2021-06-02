@@ -2,7 +2,8 @@ import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {map} from "rxjs/operators";
-import {GetGamesService} from "./get-games.service";
+import {GetGamesService} from "../domain/get-games.service";
+import {Game} from "../domain/game";
 
 @Injectable()
 export class HttpGetGamesService implements GetGamesService {
@@ -16,13 +17,6 @@ export class HttpGetGamesService implements GetGamesService {
 
 export interface HasData<T> {
   data: T;
-}
-
-export class Game {
-  readonly title: string;
-  readonly price: number;
-  readonly year: number;
-  readonly image: string;
 }
 
 

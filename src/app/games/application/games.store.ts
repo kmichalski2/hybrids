@@ -1,9 +1,9 @@
 import {Store} from "./store";
-import {Game} from "../infrastructure/http-get-games.service";
 import {Observable} from "rxjs";
 import {map} from "rxjs/operators";
 import {Inject, Injectable} from "@angular/core";
-import {GET_GAMES_SERVICE, GetGamesService} from "../infrastructure/get-games.service";
+import {GET_GAMES_SERVICE, GetGamesService} from "../domain/get-games.service";
+import {Game} from "../domain/game";
 
 export class GamesStateModel {
   selected: Game;
