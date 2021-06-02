@@ -2,7 +2,7 @@
   <div class="container" *ngIf="selected$ | async as selected else noGameSelected">
     <h2>{{selected.title}}</h2>
     <p>{{selected.year}}</p>
-    <button type="button" class="btn btn-primary" (click)="onPlayed(selected)">Play</button>
+    <button type="button" class="btn btn-primary" (click)="onPlayedClicked(selected)" data-selector="play-button">Play</button>
   </div>
   <ng-template #noGameSelected>
     <div class="container">

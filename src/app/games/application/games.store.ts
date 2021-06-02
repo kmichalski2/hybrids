@@ -20,7 +20,7 @@ export const DEFAULT_GAMES_STATE: GamesStateModel = {
 @Injectable({
   providedIn: 'root'
 })
-export class GamesStore extends Store<GamesStateModel>{
+export class GamesStore extends Store<GamesStateModel> {
   constructor(@Inject(GET_GAMES_SERVICE) private getGamesService: GetGamesService) {
     super(DEFAULT_GAMES_STATE);
   }
@@ -45,10 +45,6 @@ export class GamesStore extends Store<GamesStateModel>{
 
   public select(game: Game): void {
     this.patchState({selected: game});
-  }
-
-  public run(game: Game): void {
-    alert(`Game ${game.title} is running...`);
   }
 
   public buy(game: Game): void {

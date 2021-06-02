@@ -23,7 +23,8 @@ export class MyGamesListComponent implements OnInit {
     this.store.select(game);
   }
 
-  onPlayed(game: Game): void {
+  // TODO (1): on click redirect to https://store.steampowered.com/app/${id}
+  onPlayedClicked(game: Game): void {
     alert(`Running the game ${game.title} ....`);
   }
 }
