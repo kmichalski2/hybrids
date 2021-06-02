@@ -12,6 +12,7 @@ export class MyGamesListComponent implements OnInit {
   myGames$: Observable<Game[]>;
   selected$: Observable<Game>;
 
+  // TODO (2): ISP, DIP on document provider
   constructor(private store: GamesStore) { }
 
   ngOnInit(): void {

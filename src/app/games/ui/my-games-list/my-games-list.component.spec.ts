@@ -1,6 +1,8 @@
 import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
 import {MyGamesListComponent} from './my-games-list.component';
 import {By} from "@angular/platform-browser";
+import {GET_GAMES_SERVICE} from "../../domain/get-games";
+import {GetGamesStub} from "../../domain/get-games.stub";
 
 describe('MyGamesListComponent', () => {
   let component: MyGamesListComponent;
@@ -8,7 +10,13 @@ describe('MyGamesListComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [MyGamesListComponent]
+      declarations: [MyGamesListComponent],
+      providers: [
+        {
+          provide: GET_GAMES_SERVICE,
+          useClass: GetGamesStub
+        }
+      ]
     })
       .compileComponents();
   }));

@@ -2,6 +2,7 @@
   "data": [
     {
       "id": null,
+      "type": "console",
       "title": "Spider-Man",
       "price": 129.99,
       "year": 2018,
@@ -9,6 +10,7 @@
     },
     {
       "id": null,
+      "type": "console",
       "title": "Call of Duty: Black Ops Cold War",
       "price": 99.99,
       "year": 2020,
@@ -16,6 +18,7 @@
     },
     {
       "id": null,
+      "type": "console",
       "title": "Assassin's Creed Valhalla",
       "price": 249.99,
       "year": 2020,
@@ -23,6 +26,7 @@
     },
     {
       "id": "1225330",
+      "type": "steam",
       "title": "NBA 2K21",
       "price": 259.99,
       "year": 2020,
@@ -30,6 +34,7 @@
     },
     {
       "id": "271590",
+      "type": "steam",
       "title": "Grand Theft Auto V",
       "price": 129.99,
       "year": 2013,
@@ -37,6 +42,7 @@
     },
     {
       "id": null,
+      "type": "console",
       "title": "God of War",
       "price": 39.99,
       "year": 2018,
@@ -44,6 +50,7 @@
     },
     {
       "id": null,
+      "type": "console",
       "title": "Ghost of Tsushima",
       "price": 179.99,
       "year": 2020,
@@ -51,20 +58,23 @@
     },
     {
       "id": null,
+      "type": "console",
       "title": "Crash Bandicoot 4: It's About Time",
       "price": 119.99,
       "year": 2020,
       "image": "https://upload.wikimedia.org/wikipedia/en/3/39/Crash_Bandicoot_4_Box_Art.jpeg"
     },
     {
-      "id": null,
+      "id": "1207658916",
+      "type": "GOG",
       "title": "Might and Magic VII: For Blood and Honor",
       "price": 19.99,
       "year": 1999,
       "image": "https://upload.wikimedia.org/wikipedia/en/0/0b/MightAndMagic7Box.jpg"
     },
     {
-      "id": "null",
+      "id": null,
+      "type": "console",
       "title": "Watch Dogs: Legion",
       "price": 129.99,
       "year": 2020,
@@ -72,6 +82,7 @@
     },
     {
       "id": "217200",
+      "type": "steam",
       "title": "Worms Armageddon",
       "price": 19.99,
       "year": 1999,
@@ -79,6 +90,7 @@
     },
     {
       "id": "297000",
+      "type": "steam",
       "title": "Heroes of Might and Magic III",
       "price": 12.99,
       "year": 1999,

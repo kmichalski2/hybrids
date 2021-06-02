@@ -2,8 +2,9 @@ import {Store} from "./store";
 import {Observable} from "rxjs";
 import {map} from "rxjs/operators";
 import {Inject, Injectable} from "@angular/core";
-import {GET_GAMES_SERVICE, GetGamesService} from "../domain/get-games.service";
+import {GET_GAMES_SERVICE, GetGames} from "../domain/get-games";
 import {Game} from "../domain/game";
+import {HttpGetGamesService} from "../infrastructure/http-get-games.service";
 
 export class GamesStateModel {
   selected: Game;
@@ -21,7 +22,7 @@ export const DEFAULT_GAMES_STATE: GamesStateModel = {
   providedIn: 'root'
 })
 export class GamesStore extends Store<GamesStateModel> {
-  constructor(@Inject(GET_GAMES_SERVICE) private getGamesService: GetGamesService) {
+  constructor(private getGamesService: HttpGetGamesService) {
     super(DEFAULT_GAMES_STATE);
   }
 
