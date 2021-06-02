@@ -9,6 +9,5 @@ import {Game} from "../../domain/game";
 export class CardComponent {
   @Input() game: Game;
 
-  constructor() {
-  }
+  constructor() {}
 }
