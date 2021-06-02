@@ -16,7 +16,7 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     GamesModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })
   ],
   providers: [],
   bootstrap: [AppComponent]
