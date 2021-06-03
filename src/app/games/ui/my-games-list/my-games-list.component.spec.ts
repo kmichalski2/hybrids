@@ -2,11 +2,11 @@ import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
 import {MyGamesListComponent} from './my-games-list.component';
 import {By} from "@angular/platform-browser";
 import {GAME_STUB, GetGamesStub} from "../../domain/get-games.stub";
-import {HttpGetGamesService} from "../../infrastructure/http-get-games.service";
 import {MatSnackBar, MatSnackBarModule} from "@angular/material/snack-bar";
 import {NoopAnimationsModule} from "@angular/platform-browser/animations";
 import {GamesStore} from "../../application/games.store";
 import {of} from "rxjs";
+import {GET_GAMES} from "../../domain/get-games";
 
 // TODO: (3) Fix test with window
 describe('MyGamesListComponent', () => {
@@ -21,7 +21,7 @@ describe('MyGamesListComponent', () => {
       declarations: [MyGamesListComponent],
       providers: [
         {
-          provide: HttpGetGamesService,
+          provide: GET_GAMES,
           useClass: GetGamesStub
         },
       ]

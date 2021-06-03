@@ -31,4 +31,8 @@ export class MyGamesListComponent implements OnInit {
   onPlayedClicked(game: Game): void {
     this.snackbar.open(`Running the game ${game.title} ....`);
   }
+
+  // TODO (5): different runners
+  // https://www.gog.com/u/whoispro/game/${this.id}`;
+  // https://www.google.com/search?q=${this.title}`;
 }

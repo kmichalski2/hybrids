@@ -6,4 +6,4 @@ export interface GetGames {
   get(): Observable<Game[]>;
 }
 
-export const GET_GAMES_SERVICE = new InjectionToken<GetGames>('GET_GAMES_SERVICE');
+export const GET_GAMES = new InjectionToken<GetGames>('GET_GAMES');

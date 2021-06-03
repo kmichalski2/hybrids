@@ -9,6 +9,8 @@ import {CardComponent} from "./ui/card/card.component";
 import {TabsComponent} from "./ui/tabs/tabs.component";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {GameFactory} from "./domain/game.factory";
+import {GET_GAMES} from "./domain/get-games";
 
 const routes: Routes = [{
   path: 'games', component: GamesListComponent,
@@ -30,7 +32,11 @@ const routes: Routes = [{
     GamesListComponent
   ],
   providers: [
-    HttpGetGamesService,
+    {
+      provide: GET_GAMES,
+      useClass: HttpGetGamesService
+    },
+    GameFactory,
     {
       provide: Window,
       useValue: window

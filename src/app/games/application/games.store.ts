@@ -2,9 +2,8 @@ import {Store} from "./store";
 import {Observable} from "rxjs";
 import {map} from "rxjs/operators";
 import {Inject, Injectable} from "@angular/core";
-import {GET_GAMES_SERVICE, GetGames} from "../domain/get-games";
+import {GET_GAMES, GetGames} from "../domain/get-games";
 import {Game} from "../domain/game";
-import {HttpGetGamesService} from "../infrastructure/http-get-games.service";
 
 export class GamesStateModel {
   selected: Game;
@@ -22,7 +21,7 @@ export const DEFAULT_GAMES_STATE: GamesStateModel = {
   providedIn: 'root'
 })
 export class GamesStore extends Store<GamesStateModel> {
-  constructor(private getGamesService: HttpGetGamesService) {
+  constructor(@Inject(GET_GAMES) private getGamesService: GetGames) {
     super(DEFAULT_GAMES_STATE);
   }
 
@@ -49,12 +48,12 @@ export class GamesStore extends Store<GamesStateModel> {
   }
 
   public buy(game: Game): void {
-    const { myGames } = this.state.getValue();
-    this.patchState({ myGames: [ ...myGames, game ]});
+    const {myGames} = this.state.getValue();
+    this.patchState({myGames: [...myGames, game]});
   }
 
   private isMyGame(game: Game): boolean {
-    const { myGames } = this.state.getValue();
+    const {myGames} = this.state.getValue();
     return myGames.findIndex(g => g.title === game.title) > -1;
   }
 }
