@@ -1,7 +1,8 @@
 export class Game {
-  readonly id: string | null;
-  readonly title: string;
-  readonly price: number;
-  readonly year: number;
-  readonly image: string;
+  public readonly id: string | null;
+  public readonly title: string;
+  public readonly price: number;
+  public readonly year: number;
+  public readonly image: string;
+  public readonly type: string;
 }

@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Observable} from "rxjs";
 import {GamesStore} from "../../application/games.store";
 import {Game} from "../../domain/game";
+import {MatSnackBar} from "@angular/material/snack-bar";
 
 @Component({
   selector: 'app-my-games-list',
@@ -12,8 +13,9 @@ export class MyGamesListComponent implements OnInit {
   myGames$: Observable<Game[]>;
   selected$: Observable<Game>;
 
-  // TODO (2): ISP, DIP on document provider
-  constructor(private store: GamesStore) { }
+  // TODO (2): Add window dependency
+  // TODO (4) ISP
+  constructor(private store: GamesStore, private snackbar: MatSnackBar) { }
 
   ngOnInit(): void {
     this.myGames$ = this.store.myGames$;
@@ -25,7 +27,8 @@ export class MyGamesListComponent implements OnInit {
   }
 
   // TODO (1): on click redirect to https://store.steampowered.com/app/${id}
+  // SRP, OCP, DIP
   onPlayedClicked(game: Game): void {
-    alert(`Running the game ${game.title} ....`);
+    this.snackbar.open(`Running the game ${game.title} ....`);
   }
 }
